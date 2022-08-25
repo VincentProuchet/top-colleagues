@@ -1,5 +1,7 @@
-<div class="btn-group btn-group-sm">
-
+<!--Pour que les deux bouton soient collées l'un à lautre -->
+<div class="btn-group btn-group-sm" role="group" aria-label="likes">
+  <!--button like désactivé, si le score attaché est supérieur à 1000-->
   <button type="button" class="btn btn-success" (click)="choix.emit(like)" [disabled]="score>=1000">Like</button>
+  <!--button dislike désactivé, si le score attaché est inférieur à -1000-->
   <button type="button" class="btn btn-danger" (click)="choix.emit(hate)" [disabled]="score<=-1000">Hate</button>
 </div>

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Colleague } from 'src/app/models/colleague';
-import { ColleagueComponent } from '../colleague/colleague.component';
 
 @Component({
   selector: 'tc-colleague-list',
@@ -8,14 +7,22 @@ import { ColleagueComponent } from '../colleague/colleague.component';
   styleUrls: ['./colleague-list.component.scss']
 })
 export class ColleagueListComponent implements OnInit {
-
+  /**une image par défault */
   static DEFAULT_IMG = "./assets/logo.jpg";
+  /**la liste des colleagues */
   colleagues: Array<Colleague>;
+  /**
+   * initialisation du tableau dés la création
+   */
   constructor() {
     this.colleagues = new Array();
 
   }
-
+  /**
+   * ici on peuple la collection
+   * maisd c'est juste pour l'exemple
+   * oui, je me suis lâché sur les pseudos
+   */
   ngOnInit(): void {
     this.colleagues.push(this.newColleague("Bend_Over", 10, ColleagueListComponent.DEFAULT_IMG));
     this.colleagues.push(this.newColleague("Mike_Hunt", 7, ColleagueListComponent.DEFAULT_IMG));
@@ -25,6 +32,12 @@ export class ColleagueListComponent implements OnInit {
     this.colleagues.push(this.newColleague("Wisely", 60, ColleagueListComponent.DEFAULT_IMG));
 
   }
+  /**
+   * @param ps pseudo
+   * @param s score
+   * @param ph photo URL
+   * @returns une instance de 'linterface Colleague
+   */
   newColleague(ps: string, s: number, ph: string): Colleague {
     return {
       pseudo: ps,

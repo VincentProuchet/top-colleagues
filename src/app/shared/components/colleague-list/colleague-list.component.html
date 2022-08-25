@@ -1,5 +1,13 @@
-<div class="d-flex flex-wrap">
-  <tc-colleague *ngFor="let collegue of colleagues" [person]="collegue"></tc-colleague>
+<div class="d-flex flex-wrap ">
+  <!--
+    pour chaque collegue dans le tableau
+      une instance de <tc-colleagues> serat crée
+        et recevras les données de la variable colleague
+        notez qu'ici l'usage du modéle objet simplifie largement
+        le passage de grandes quantité d'information sans surcharger l'écriture/lecture du code
+
+  -->
+  <tc-colleague class="m-1" *ngFor="let collegue of colleagues" [person]="collegue"></tc-colleague>
 
 
 

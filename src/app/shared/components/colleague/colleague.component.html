@@ -1,14 +1,15 @@
+<!--
+  une Card parce que ça rend les mise en forme de cce genre d'élément nettement plus propre
+  il semble qu'il vaille mieux ne pas utiliser les classes
+  container
+  row
+  cela ruine vos effort de mise en forme du texte
+-->
 <div class="card">
-  <div class="container">
-
-    <img class="card-img" src={{person.photo}} width="40px" height="80px" alt="Photo de {{person.pseudo}}">
-    <div class="container card-text">
-      <div class="row">{{person.pseudo}}</div>
-      <div class="row">{{person.score}}</div>
-    </div>
-    <div class="container">
-      <tc-like-hate (choix)="likes($event)" [score]="person.score"></tc-like-hate>
-
-    </div>
+  <img class="card-img card-img-top" src={{person.photo}} width="40px" height="80px" alt="Photo de {{person.pseudo}}">
+  <div class="card-body text-center">
+    <div class="card-text ">{{person.pseudo|uppercase}} </div>
+    <div class="card-text ">{{person.score}}</div>
   </div>
+  <tc-like-hate class="text-center card-footer" (choix)="likes($event)" [score]="person.score"></tc-like-hate>
 </div>

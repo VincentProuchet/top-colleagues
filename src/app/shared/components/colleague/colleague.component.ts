@@ -8,16 +8,16 @@ import { Colleague } from 'src/app/models/colleague';
   styleUrls: ['./colleague.component.scss']
 })
 export class ColleagueComponent implements OnInit {
+  // permet de faire rentrer les données en utilisant le nom de la variable [person] = données à entrer
   @Input()
   person !: Colleague;
 
-  constructor() {
-
-  }
-
-  ngOnInit(): void {
-
-  }
+  constructor() { }
+  ngOnInit(): void { }
+  /**
+   *
+   * @returns une instance de l'interface colleague
+   */
   getInterface(): Colleague {
     return {
       pseudo: "Robert",
@@ -29,6 +29,7 @@ export class ColleagueComponent implements OnInit {
    * Event
    * bouton like
    * bouton Hate
+   * met à jour le score
    */
   likes(val: LikeHate) {
     if (val == LikeHate.LIKE) {

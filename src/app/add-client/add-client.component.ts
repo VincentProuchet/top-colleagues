@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Personne } from '../model/personne';
+import { Personne } from '../models/personne';
 
 @Component({
   selector: 'tc-add-client',

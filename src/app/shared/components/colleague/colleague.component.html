@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="container">
+
+    <img class="card-img" src={{person.photo}} width="40px" height="80px" alt="Photo de {{person.pseudo}}">
+    <div class="container card-text">
+      <div class="row">{{person.pseudo}}</div>
+      <div class="row">{{person.score}}</div>
+    </div>
+    <div class="container">
+      <tc-like-hate (choix)="likes($event)" [score]="person.score"></tc-like-hate>
+
+    </div>
+  </div>
+</div>

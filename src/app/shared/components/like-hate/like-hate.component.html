@@ -1,0 +1,5 @@
+<div class="btn-group btn-group-sm">
+
+  <button type="button" class="btn btn-success" (click)="choix.emit(like)" [disabled]="score>=1000">Like</button>
+  <button type="button" class="btn btn-danger" (click)="choix.emit(hate)" [disabled]="score<=-1000">Hate</button>
+</div>

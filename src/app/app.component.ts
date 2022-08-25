@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'top-colleagues';
-  prenom: string = "rober";
+  prenom: string = "robert";
 
   callChgPr(prenom: string) {
     alert(prenom);

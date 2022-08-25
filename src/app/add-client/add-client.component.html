@@ -1,1 +1,48 @@
-<p>add-client works!</p>
+<div class="card">
+  <div class="card-header">Ajouter un client</div>
+  <div class="container">
+
+    <div class="form-group form-inline">
+      <label for="nom" class="badge bg-info">nom</label>
+      <input class="form-control" type="text" name="nom" id="" [(ngModel)]="nom">
+    </div>
+    <div class=" form-group form-inline">
+      <label for="prennom" class="badge bg-info">prénom</label>
+      <input class="form-control" type="text" name="prenom" id="" [(ngModel)]="prenom">
+    </div>
+    <div class="form-group form-inline">
+      <label for="adresse" class="badge bg-info">addresse</label>
+      <input class="form-control" type="text" name="adresse" id="" [(ngModel)]="adresse">
+    </div>
+  </div>
+
+  <button class=" btn btn-primary" (click)="ajouter()">
+    Ajouter</button>
+</div>
+
+
+<div>
+  <table class="table table-success table-strip">
+    <thead>
+      <tr>
+        <th>nom</th>
+        <th>Prénom</th>
+        <th>Adresse</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of tabPersonnes">
+        <td>
+          {{item.nom}}
+        </td>
+        <td>
+          {{item.prenom}}
+        </td>
+        <td>
+          {{item.adresse}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

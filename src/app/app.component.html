@@ -6,5 +6,19 @@
   par contre ce qui suit
 -->
   <!-- new Colleguescomonents()-->
-  <tc-collegues></tc-collegues>
+  <tc-collegues [nom]="'Germain'"></tc-collegues>
+  <!--[nom]="valeur" On passe la valeur
+    "''" permet de masse directement la valeur, sinon le workframe
+    cherche une variable
+     à la variable @Input() nom au composant collegues -->
+  <tc-collegues nom='Martin' prenom="patrick"></tc-collegues>
+  <!-- on ne peut faire  comme ceci
+    uniquement car la variable qui reçoit est un type string
+  @Input() nom : string -->
+  <tc-collegues nom="Robert" [prenom]='prenom' (chgPrenom)="callChgPr($event)"></tc-collegues>
+
+</div>
+<div class="d-flex flex-row flex-wrap ">
+  <tc-add-client></tc-add-client>
+
 </div>

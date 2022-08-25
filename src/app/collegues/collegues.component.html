@@ -1,0 +1,23 @@
+<h1 class="Jumbotron"></h1>
+<div class="card">
+  <h4 class="card-header">{{cardTitle}} </h4>
+  <img [src]="uneImage" class="card-image" height="40px" width="40px" alt="Une Image par binding">
+  <!-- [] => biding de propriété  -->
+  <!--  *=> directive de structure d'angular -->
+  <p *ngIf="unChamp">
+    <!--{{ }}=> interpolation : affichage d'une variable,
+       du retour d'une fonction ... -->
+    {{ unChamp }} <br>
+    <!-- Pipe  => permet de transformer l'affichage de la donnée -->
+    {{ unChamp | uppercase}}
+  </p>
+  <!-- #saisie  est un variable locale de la vue
+    declarer une variable locale à la vue #nomDeLaVariable
+  -->
+  <input type="text" #saisie>
+  <!-- () => lié à un evenement -->
+  <button (click)="mclique(saisie.value)">evt</button><br>
+  <input type="text" name="" id="" [(ngModel)]="saisieTwoWay"><br>
+  {{saisieTwoWay}}
+
+</div>

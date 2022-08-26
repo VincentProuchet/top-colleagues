@@ -10,21 +10,11 @@ import { Colleague } from 'src/app/models/colleague';
 export class ColleagueComponent implements OnInit {
   // permet de faire rentrer les données en utilisant le nom de la variable [person] = données à entrer
   @Input()
-  person !: Colleague;
+  person: Colleague = { pseudo: 'PErsonne', score: 0, photo: './assets/logo.jpg' };
 
   constructor() { }
   ngOnInit(): void { }
-  /**
-   *
-   * @returns une instance de l'interface colleague
-   */
-  getInterface(): Colleague {
-    return {
-      pseudo: "Robert",
-      score: -999,
-      photo: ""
-    }
-  }
+
   /**
    * Event
    * bouton like
@@ -32,6 +22,7 @@ export class ColleagueComponent implements OnInit {
    * met à jour le score
    */
   likes(val: LikeHate) {
+    // un switch ça serait pas mal aussi
     if (val == LikeHate.LIKE) {
       this.person.score += 1;
     }

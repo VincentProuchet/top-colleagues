@@ -9,7 +9,7 @@
   <img class="card-img card-img-top" src={{person.photo}} width="40px" height="80px" alt="Photo de {{person.pseudo}}">
   <div class="card-body text-center">
     <div class="card-title ">{{person.pseudo|uppercase}} </div>
-    <div class="card-text ">{{person.score}}</div>
+    <div class="card-text ">{{person.score|score}}</div>
   </div>
   <tc-like-hate class="text-center card-footer" (choix)="likes($event)" [hateDisabled]="person.score<=-1000"
     [likeDisabled]="person.score>=1000"></tc-like-hate>

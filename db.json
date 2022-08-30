@@ -16,5 +16,46 @@
   "profile": {
     "name": "typicode"
   },
-  "votes": []
+  "votes": [
+    {
+      "colleague": {
+        "pseudo": "Wisely",
+        "score": 998,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 1,
+      "index": 0,
+      "id": 1
+    },
+    {
+      "colleague": {
+        "pseudo": "Wisely",
+        "score": 999,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 2
+    },
+    {
+      "colleague": {
+        "pseudo": "Wisely",
+        "score": 1000,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 3
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 11,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 4
+    }
+  ]
 }

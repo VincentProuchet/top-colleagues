@@ -1,7 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { LikeHate } from '../models/like-hate';
 import { Vote } from '../models/vote';
-import { WelcomePage } from '../pages/welcome/welcome.page';
 import { LikehateService } from './likehate.service';
 
 @Injectable({
@@ -9,32 +10,30 @@ import { LikehateService } from './likehate.service';
 })
 export class VoteService {
 
+  static API_VOTE_URL = "http://localhost:3000/votes";
+
   private _cptHate: number = 0;
   private _cptLike: number = 0;
 
   private listVote: Vote[] = new Array();
 
-  constructor(private srvLH: LikehateService) {
+  constructor(private srvLH: LikehateService, private http: HttpClient) {
 
     console.log('service Vote is running');
   }
 
-  init() {
-    this.listVote.push({
-      colleague: { pseudo: "Ben-dOver", score: 10, photo: WelcomePage.DEFAULT_IMG },
-      vote: LikeHate.LIKE, index: 1
-    });
-    this.listVote.push({
-      colleague: { pseudo: "Vulgar", score: -999, photo: WelcomePage.DEFAULT_IMG },
-      vote: LikeHate.HATE, index: 2
-    });
-    this.listVote.push({
-      colleague: { pseudo: "M_Dickhearts", score: 10, photo: WelcomePage.DEFAULT_IMG },
-      vote: LikeHate.LIKE, index: 3
-    });
+  findAll(): Observable<Vote[]> {
+    return this.http.get<Vote[]>(VoteService.API_VOTE_URL);
   }
-  list(): Vote[] {
-    return this.listVote;
+  /**
+   *
+   * @returns Observable<Vote[]> pour | async dans
+
+   * le composant voting-history
+   */
+  list(): Observable<Vote[]> {
+
+    return this.findAll();
   }
   tri() {
 

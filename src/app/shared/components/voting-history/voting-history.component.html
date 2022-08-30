@@ -3,7 +3,7 @@
     Historique
   </div>
   <div class="card-body"></div>
-  <div class="flex" *ngFor="let vote of voteservice.list(), let index = index">
+  <div class="flex" *ngFor="let vote of votesTab, let index = index ">
     <div class="card">
 
 
@@ -15,7 +15,7 @@
 
         </div>
       </div>
-      <button class="card-footer btn btn-alert" (click)="voteservice.delete(vote.index)">supprimer
+      <button class="card-footer btn btn-alert" (click)="srvVotes.delete(vote.index)">supprimer
       </button>
     </div>
 

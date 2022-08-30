@@ -14,10 +14,9 @@ export class ColleagueService {
   private voteTri: boolean = true;
   /**
    *
-   * @param voteservice : l'injection du service de vote
-   * @param http : on récupérer l'injection httpClient pour pouvoir comminiquer avec le backEnd
+      * @param http : on récupérer l'injection httpClient pour pouvoir comminiquer avec le backEnd
    */
-  constructor(private voteservice: VoteService, private http: HttpClient) {
+  constructor(private http: HttpClient) {
     console.log('ServiceColleague is running');
 
     this.init();
@@ -48,10 +47,15 @@ export class ColleagueService {
     /**
      * c'est d'ici que l'on met à jour la bdd par le backend
      */
+    this.http.post<Vote>("http://localhost:3000/votes", vote).subscribe(
+      {
+        next: vote => console.log(vote),
+        error: error => console.error(error)
+      });
 
 
     if (this.voteTri) {
-      this.voteservice.tri();
+      //this.voteservice.tri();
     }
   }
 }

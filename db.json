@@ -16,6 +16,38 @@
   "profile": {
     "name": "typicode"
   },
+  "users": [
+    {
+      "pseudo": "Ben_dOver",
+      "score": 0,
+      "photo": ""
+    },
+    {
+      "pseudo": "Mike_Hunt",
+      "score": 0,
+      "photo": ""
+    },
+    {
+      "pseudo": "Dick_Bicks",
+      "score": 50,
+      "photo": ""
+    },
+    {
+      "pseudo": "Mie_Dickhearts",
+      "score": -5,
+      "photo": ""
+    },
+    {
+      "pseudo": "Vulgar",
+      "score": -999,
+      "photo": ""
+    },
+    {
+      "pseudo": "Wisely",
+      "score": 999,
+      "photo": ""
+    }
+  ],
   "votes": [
     {
       "colleague": {
@@ -56,6 +88,26 @@
       "vote": 0,
       "index": 0,
       "id": 4
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 11,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 5
+    },
+    {
+      "colleague": {
+        "pseudo": "Mike_Hunt",
+        "score": 6,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 1,
+      "index": 0,
+      "id": 6
     }
   ]
 }

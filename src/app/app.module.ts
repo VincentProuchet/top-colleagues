@@ -11,6 +11,8 @@ import { WelcomeModule } from './pages/welcome/welcome.module';
 import { Comp01Component } from './demmobs/comp01/comp01.component';
 import { Comp02Component } from './demmobs/comp02/comp02.component';
 import { PostComponent } from './demohttp/post/post.component';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './demoRoutes/app.route';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { PostComponent } from './demohttp/post/post.component';
     FormsModule, // à ajouter poour le support des formulaires
     SharedModule,
     WelcomeModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

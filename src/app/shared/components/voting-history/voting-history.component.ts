@@ -80,15 +80,6 @@ ${emoticone}
 `;
 
   }
-
-  tri() {
-    this.votesTab.sort((v1, v2) => {
-      if (v1.index < v2.index) return -1;
-      else if (v1.index > v2.index) return 1;
-      else return 1;
-    }
-    )
-  }
-
-
 }
+
+

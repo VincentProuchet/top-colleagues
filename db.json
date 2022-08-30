@@ -20,32 +20,32 @@
     {
       "pseudo": "Ben_dOver",
       "score": 0,
-      "photo": ""
+      "photo": "./assets/logo.jpg"
     },
     {
       "pseudo": "Mike_Hunt",
       "score": 0,
-      "photo": ""
+      "photo": "./assets/logo.jpg"
     },
     {
       "pseudo": "Dick_Bicks",
       "score": 50,
-      "photo": ""
+      "photo": "./assets/logo.jpg"
     },
     {
       "pseudo": "Mie_Dickhearts",
       "score": -5,
-      "photo": ""
+      "photo": "./assets/logo.jpg"
     },
     {
       "pseudo": "Vulgar",
       "score": -999,
-      "photo": ""
+      "photo": "./assets/logo.jpg"
     },
     {
       "pseudo": "Wisely",
-      "score": 999,
-      "photo": ""
+      "score": 998,
+      "photo": "./assets/logo.jpg"
     }
   ],
   "votes": [
@@ -108,6 +108,116 @@
       "vote": 1,
       "index": 0,
       "id": 6
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 1,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 7
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 2,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 8
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 3,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 9
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 4,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 10
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 5,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 11
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 6,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 12
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 7,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 13
+    },
+    {
+      "colleague": {
+        "pseudo": "Ben_dOver",
+        "score": 8,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 14
+    },
+    {
+      "colleague": {
+        "pseudo": "Vulgar",
+        "score": -1000,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 1,
+      "index": 0,
+      "id": 15
+    },
+    {
+      "colleague": {
+        "pseudo": "Wisely",
+        "score": 999,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 16
+    },
+    {
+      "colleague": {
+        "pseudo": "Wisely",
+        "score": 1000,
+        "photo": "./assets/logo.jpg"
+      },
+      "vote": 0,
+      "index": 0,
+      "id": 17
     }
   ]
 }

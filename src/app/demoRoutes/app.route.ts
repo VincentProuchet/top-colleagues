@@ -13,7 +13,12 @@ import { WelcomePage } from "../pages/welcome/welcome.page";
  */
 export const ROUTES: Routes = [
   {
-    path: '', component: PostComponent
+    path: 'posts', component: PostComponent
+
+  },
+  {
+    /**ici postId est le nom de la variable */
+    path: 'posts/:postId', component: PostComponent
 
   },
   {
@@ -22,5 +27,39 @@ export const ROUTES: Routes = [
   },
   {
     path: 'welcome', component: WelcomePage
+  },
+  {
+    // redirige vers une route pâr défaut (démarrage de l'application)
+    path: '', redirectTo: '/posts', pathMatch: 'full'
+  },
+  {
+    path: '**', redirectTo: '/posts'
+    /**
+     * ce bloc vient en dernier
+     * redirigeras tous ce qui ne se trouve pas au-dessus
+     * vers la route redirectTo
+     * on le gére pour la notion de 404
+     *
+     */
+
   }
+  /*{
+  path:'pizzas/:pizzaId',
+  component:PizzaDetailComponent,
+  children:[
+    {path:'',pathMatch:'full',redirectTo:'caracteristiques'},
+    {path:'avis',component:AvisPizzaComponent},
+    {path:'caracteristiques',component:CaracteristiquesComponent}
+  ]
+}
+->> :pizzaId : c'est pathvariable ->une variable à récupérer dans le composant
+en récupérant l'url ..
+ *pizzas/10 => pizzas/10/caracteristiques
+ *pizzas/10/avis
+ *pizzas/10/caracteristiques
+ *Dans tous les cas, je passe par le composant :
+             component:PizzaDetailComponent
+ */
+
+
 ];

@@ -11,11 +11,7 @@ import { ColleagueService } from 'src/app/providers/colleague.service';
   styleUrls: ['./colleague-list.component.scss']
 })
 export class ColleagueListComponent implements OnInit {
-  /**une image par défault */
-  static DEFAULT_IMG = "./assets/logo.jpg";
-  /**la liste des colleagues */
-  // @Input() colleagues: Array<Colleague> = new Array();
-  // @Input() listVotes: Array<Vote> = new Array();
+
   /**
    *
    * @param colleagueservice c'est l'injection du singleton du service : colleagueService
@@ -23,21 +19,11 @@ export class ColleagueListComponent implements OnInit {
    *
    */
   constructor(public colleagueservice: ColleagueService) { }
-  /**
-   * ici on peuple la collection
-   * maisd c'est juste pour l'exemple
-   * oui, je me suis lâché sur les pseudos
-   */
-  ngOnInit(): void {
 
-  }
+  ngOnInit(): void { }
+
   callVote(vote: Vote) {
     this.colleagueservice.addVote(vote);
-    //vote.index = this.listVotes.length + 1
-    //this.listVotes.push(vote);
-    // this.listVotes.unshift(vote);
   }
-
-
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, interval, Observable, ReplaySubject, Subject } from 'rxjs';
+import { ColleagueService } from 'src/app/providers/colleague.service';
 
 @Component({
   selector: 'tc-welcome',
@@ -29,36 +30,14 @@ export class WelcomePage implements OnInit {
   //listVotes: Vote[] = new Array<Vote>();
   /**une image par défault */
   static DEFAULT_IMG = "./assets/logo.jpg";
-  constructor() { }
+  constructor(private srvColleagues: ColleagueService) { }
 
-  ngOnInit(): void {
-    this.useObservable();
-    // this.useSubject();
-    // this.useSubject02();
-    this.useSubject03();
-    /**
-    this.listColleague.push({ pseudo: "Ben_dOver", score: 10, photo: WelcomePage.DEFAULT_IMG });
-    this.listColleague.push({ pseudo: "Mike_Hunt", score: 7, photo: WelcomePage.DEFAULT_IMG });
-    this.listColleague.push({ pseudo: "Mie_Dickhearts", score: 25, photo: WelcomePage.DEFAULT_IMG });
-    this.listColleague.push({ pseudo: "Dick_Bicks", score: 30, photo: WelcomePage.DEFAULT_IMG });
-    this.listColleague.push({ pseudo: "Vulgar", score: -999, photo: WelcomePage.DEFAULT_IMG });
-    this.listColleague.push({ pseudo: "Wisely", score: 999, photo: WelcomePage.DEFAULT_IMG });
-     *
-     this.listVotes.push({
-       colleague: { pseudo: "Ben-dOver", score: 10, photo: WelcomePage.DEFAULT_IMG },
-          vote: LikeHate.LIKE
-        });
-        this.listVotes.push({
-          colleague: { pseudo: "Vulgar", score: -999, photo: WelcomePage.DEFAULT_IMG },
-          vote: LikeHate.HATE
-        });
-        this.listVotes.push({
-          colleague: { pseudo: "M_Dickhearts", score: 10, photo: WelcomePage.DEFAULT_IMG },
-          vote: LikeHate.LIKE
-        });
-        */
 
+  ngOnInit(): void { }
+  refreshColleague() {
+    this.srvColleagues.RefreshList();
   }
+
   useObservable() {
     let myObservable = new Observable(observer => {
       setTimeout(() => observer.next('Prouchet'), 6000);

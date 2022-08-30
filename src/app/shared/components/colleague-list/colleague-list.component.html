@@ -6,8 +6,12 @@
         notez qu'ici l'usage du modéle objet simplifie largement
         le passage de grandes quantité d'information sans surcharger l'écriture/lecture du code
 
+        emte vote est un passage d'evénement
+
   -->
-  <tc-colleague class="m-1" *ngFor="let collegue of colleagues" [person]="collegue"></tc-colleague>
+  <tc-colleague class="m-1" *ngFor="let collegue of colleagueservice.list()" (emetVote)="callVote($event)"
+    [colleague]="collegue">
+  </tc-colleague>
 
 
 

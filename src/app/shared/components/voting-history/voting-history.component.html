@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header">
+    Historique
+  </div>
+  <div class="card-body"></div>
+  <div class="flex" *ngFor="let vote of voteservice.list(), let index = index">
+    <div class="card">
+
+
+      <div class="card-body text-center row row-inline">
+        <img class="card-img col" src="{{vote.colleague.photo}}" width="25px" alt="Photo de {{vote.colleague.pseudo}}">
+        <div class="card-text col-10">
+          <span>{{getAvisVote(vote)}}</span>
+
+
+        </div>
+      </div>
+      <button class="card-footer btn btn-alert" (click)="voteservice.delete(vote.index)">supprimer
+      </button>
+    </div>
+
+  </div>
+</div>

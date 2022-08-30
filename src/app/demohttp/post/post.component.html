@@ -1,0 +1,7 @@
+<p>Liste des posts </p>
+
+<ul>
+  <li *ngFor="let item of postTab">
+    {{item.id}} - {{item.title}}
+  </li>
+  <button (click)="add()">Add</button>
